@@ -1,7 +1,6 @@
 import 'package:coffeeapp/constants/color_palette.dart';
 import 'package:coffeeapp/views/details.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ColdBrew extends StatefulWidget {
@@ -21,9 +20,7 @@ class _ColdBrewState extends State<ColdBrew> {
   buildListItem(String imgPath, String price, Color bgColor) {
     return GestureDetector(
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) =>
-                  CoffeeDetails(imgPath: imgPath, headerColor: bgColor)));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => CoffeeDetails(imgPath: imgPath, headerColor: bgColor)));
         },
         child: Stack(
           children: [
@@ -109,22 +106,22 @@ class _ColdBrewState extends State<ColdBrew> {
                                             color: Colors.white,
                                             fontSize: 15.0),
                                       ),
-                                      RatingBar.builder(
-                                        initialRating: 3,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemCount: 5,
-                                        itemPadding: EdgeInsets.symmetric(
-                                            horizontal: 4.0),
-                                        itemBuilder: (context, _) => Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        onRatingUpdate: (rating) {
-                                          print(rating);
-                                        },
-                                      )
+                                      // RatingBar.builder(
+                                      //   initialRating: 3,
+                                      //   minRating: 1,
+                                      //   direction: Axis.horizontal,
+                                      //   allowHalfRating: true,
+                                      //   itemCount: 5,
+                                      //   itemPadding: EdgeInsets.symmetric(
+                                      //       horizontal: 4.0),
+                                      //   itemBuilder: (context, _) => Icon(
+                                      //     Icons.star,
+                                      //     color: Colors.amber,
+                                      //   ),
+                                      //   onRatingUpdate: (rating) {
+                                      //     print(rating);
+                                      //   },
+                                      // )
                                     ]),
                                 GestureDetector(
                                     onTap: () {},
